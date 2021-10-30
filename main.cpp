@@ -18,6 +18,11 @@ bool IsLeapYear(DateTime dt)
 	return (dt.year %4 == 0 && dt.year %100 != 0) || (dt.year %400 == 0);
 }
 
+int SecondsInMinute()
+{
+	return 60;
+}
+
 int main(){
 
 }
