@@ -13,9 +13,9 @@ public:
   int millisec;
 };
 
-bool IsLeapYear(DateTime & dt)
+bool IsLeapYear(int year)
 {
-	return (dt.year %4 == 0 && dt.year %100 != 0) || (dt.year %400 == 0);
+	return (year %4 == 0 && year %100 != 0) || (year %400 == 0);
 }
 
 int LaterInYear(DateTime & dt1, DateTime & dt2)
@@ -26,8 +26,35 @@ int LaterInYear(DateTime & dt1, DateTime & dt2)
 	}
 	else
 	{
-		return 2;
+		return 2;	
 	}
+}
+
+int DaysInYear(int year)
+{
+	if (isLeapYear(dt))
+	{
+		return 366;
+	}
+	else
+	{
+		return 365;
+	}
+}
+
+int DaysInYearRange(int yearl, int yearr)
+{
+	int ans = 0;
+	for (int i = yearl; i <= yearr; ++i)
+	{
+		ans += DaysInYear(i)
+	}
+	return ans;
+}
+
+int SeconsInHours(int hours)
+{
+	return 3600 * hours;
 }
 
 int main(){
